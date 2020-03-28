@@ -1,0 +1,29 @@
+-- Correr proyecto -- 
+ng serve
+-- Generar un componente -- 
+ng g component component/header
+ng g component pages/test
+ng g component component/product/carrito
+
+
+-- Rutas --
+//{ path: 'test', component: TestComponent }
+
+-- Rutas con parametros --
+ng g component component/product/detail
+
+Obtener id de ruta 
+
+ngOnInit() {
+  this.route.paramMap.subscribe(params => {
+    this.product = products[+params.get('productId')];
+  });
+}
+
+-- Servicios -- 
+ng g service services/Productos
+
+-- Interfaces -- 
+ng g interface interfaces/Productos
+ng g interface interfaces/Clientes
+
