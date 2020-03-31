@@ -1,0 +1,23 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <div>
+    <label for="nameProduct">
+      Nombre de producto
+    </label>
+    <input id="nameProduct" name="nameProduct" type="text" formControlName="nameProduct">
+    <div *ngIf="submitted && f.nameProduct.errors" class="invalid-feedback">
+        <div *ngIf="f.nameProduct.errors.required" style="color:red;">El nombre del producto es requerido</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="price">
+      Precio
+    </label>
+    <input id="price" name="price" type="text" formControlName="price">
+  </div>
+
+  <button class="button"  type="submit">Guardar Producto</button>
+
+</form>
+
+<button (click)="test()">test</button>

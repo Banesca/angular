@@ -1,0 +1,22 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <div>
+    <label for="firstName">
+      Nombre
+    </label>
+    <input id="firstName" name="firstName" type="text" formControlName="firstName">
+    <!--<div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+    </div>-->
+  </div>
+
+  <div>
+    <label for="address">
+      Direccion
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+
+  <button class="button" type="submit">Enviar</button>
+
+</form>

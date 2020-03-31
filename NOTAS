@@ -27,3 +27,6 @@ ng g service services/Productos
 ng g interface interfaces/Productos
 ng g interface interfaces/Clientes
 
+
+-- Crear un Formulario -- 
+ng g component formularios/producto

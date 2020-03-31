@@ -9,6 +9,9 @@ import { FooterComponent } from './component/footer/footer.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { DetailComponent } from './component/product/detail/detail.component';
 import { CarritoComponent } from './component/product/carrito/carrito.component';
+import { PersonaComponent } from './formularios/persona/persona.component';
+import { ProductoComponent } from './formularios/producto/producto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,15 @@ import { CarritoComponent } from './component/product/carrito/carrito.component'
     FooterComponent,
     ProductosComponent,
     DetailComponent,
-    CarritoComponent
+    CarritoComponent,
+    PersonaComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, // Paso 6 Formulario importar FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
